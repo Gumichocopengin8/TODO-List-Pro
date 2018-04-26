@@ -1,0 +1,42 @@
+<% include header.ejs %>
+
+<div id="container">
+    <div id="content-top">
+        <h1>
+            <a href="/">TODO List Pro</a>
+        </h1>
+    </div>
+    <div id="content-middle">
+
+    </div>
+    <div id="content-right">
+
+    </div>
+    <div id="content-center">
+        <h2><%= title %></h2>
+        <div class="add_edit_form">
+            <form action="/update" method="post">
+                <input type="hidden" name="_method" value="put">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <input type="hidden" name="_id" value="<%= task._id %>">
+                <div>
+                    <input class="input_title" type="text" name="title" value="<%= task.title %>" placeholder="Title" required>
+                </div>
+                <div>
+                    <textarea class="text" name="task" cols="60" rows="12" placeholder="What do you need TODO?"><%= task.task %></textarea>
+                </div>
+                <div class="update_button">
+                    <button type="submit">update</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="content-left">
+
+    </div>
+    <div id="content-bottom">
+
+    </div>
+</div>
+
+<% include footer.ejs %>
