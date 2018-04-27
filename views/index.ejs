@@ -14,38 +14,45 @@
     </div>
     <div id="content-center">
         <h2><%= title %></h2>
-        <div class="list">
+        <div>
             <div class="add_task">
                 <a href="/add">add task</a>
             </div>
-            <ol>
-                <% tasks.slice().reverse().forEach(function(task){ %>
-                    <li>
-                        <div>
-                            <form action="/delete" method="post">
-                                <input type="hidden" name="_method" value="delete">
-                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                                <input type="hidden" name="_id" value="<%= task._id %>">
-
-                                <a href="/edit/<%= task._id %>" class="task_title">
-                                    <%= task.title %>
-                                </a>
-                                <div class="task_date">
-                                    Updated Date <%= task.updated.toLocaleDateString() %>:
-                                    <%= task.updated.toLocaleTimeString() %><div></div>
-                                    Created Date: <%= task.created.toLocaleDateString() %>:
-                                    <%= task.created.toLocaleTimeString() %>
-                                    <div class="delete_button">
-                                        <button type="submit" onclick="return confirm('Are you sure to delete this task?');">
-                                            delete
-                                        </button>
-                                    </div>
+            <table>
+                <tr>
+                    <th>No.</th>
+                    <th>Task</th>
+                    <th>Status</th>
+                    <th>Priority</th>
+                    <th>Updated Date</th>
+                    <th>Created Date</th>
+                    <th>Delete</th>
+                </tr>
+                <% tasks.slice().reverse().forEach(function(task, index){ %>
+                    <tr>
+                        <form action="/delete" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                            <input type="hidden" name="_id" value="<%= task._id %>">
+                            <td><%= index + 1 %></td>
+                            <td><a href="/edit/<%= task._id %>" class="task_title"><%= task.title %></a></td>
+                            <td><%= task.status %></td>
+                            <td><%= task.priority %></td>
+                            <div class="task_date">
+                                <td><%= task.updated.toLocaleDateString() %>: <%= task.updated.toLocaleTimeString() %></td>
+                                <td><%= task.created.toLocaleDateString() %>: <%= task.created.toLocaleTimeString() %></td>
+                            </div>
+                            <td>
+                                <div class="delete_button">
+                                    <button type="submit" onclick="return confirm('Are you sure to delete this task?');">
+                                        delete
+                                    </button>
                                 </div>
-                            </form>
-                        </div>
-                    </li>
+                            </td>
+                        </form>
+                    </tr>
                 <% }) %>
-            </ol>
+            </table>
         </div>
     </div>
     <div id="content-left">

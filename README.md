@@ -19,31 +19,31 @@ Click the title named *'TODO List Pro'* to go home page.
 1.0.0
 
 ## For next version
-* Use extends in .ejs files because current files are messy.
+* Use extends in .ejs files because current files are messy. Use table?
 * Change UI
-* Updated Date is not literally updated, so fix it
+* Make a filter
 
 
 ## Reference
-[dotenv](https://www.npmjs.com/package/dotenv)
+* [dotenv](https://www.npmjs.com/package/dotenv)
 
-[CSRF](https://www.npmjs.com/package/csurf)
+* [CSRF](https://www.npmjs.com/package/csurf)
 
-[connect-flash](https://www.npmjs.com/package/connect-flash)
+* [connect-flash](https://www.npmjs.com/package/connect-flash)
 
-[method-override](https://www.npmjs.com/package/method-override)
+* [method-override](https://www.npmjs.com/package/method-override)
 
-[mongoose](https://www.npmjs.com/package/mongoose)
+* [mongoose](https://www.npmjs.com/package/mongoose)
 
-[body-parser](https://www.npmjs.com/package/body-parser)
+* [body-parser](https://www.npmjs.com/package/body-parser)
 
-[connect-mongo](https://www.npmjs.com/package/connect-mongo)
+* [connect-mongo](https://www.npmjs.com/package/connect-mongo)
 
-[.gitignore](https://qiita.com/anqooqie/items/110957797b3d5280c44f)
+* [.gitignore](https://qiita.com/anqooqie/items/110957797b3d5280c44f)
 
-[Express1](https://qiita.com/morou/items/06cbe49f64d56d31b793)
+* [Express1](https://qiita.com/morou/items/06cbe49f64d56d31b793)
 
-[Express2](http://webdesign-dackel.com/2015/09/29/vagrant-node-express4-mongodb/)
+* [Express2](http://webdesign-dackel.com/2015/09/29/vagrant-node-express4-mongodb/)
 
 [Express3](https://gist.github.com/mitsuruog/fc48397a8e80f051a145)
 

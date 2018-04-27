@@ -30,6 +30,8 @@ router.post('/create', function (req, res) {
     const task = new Task();
     task.title = req.body.title;
     task.task = req.body.task;
+    task.status = req.body.status;
+    task.priority = req.body.priority;
     task.save(function (err) {
         if(!err){ // if not error
             console.log('MESSAGE: success create');
@@ -37,7 +39,7 @@ router.post('/create', function (req, res) {
         } else { // if there's error
             console.log('MESSAGE: create error', err);
             req.flash('MESSAGE: ', err.errors);
-            req.redirect('/new');
+            req.redirect('/add');
         }
     })
 });
@@ -66,6 +68,9 @@ router.put('/update', function (req, res, next) {
             return next();
         task.title  = req.body.title;
         task.task = req.body.task;
+        task.status = req.body.status;
+        task.priority = req.body.priority;
+        task.updated = Date.now();
         task.save(function (err) {
             if(!err){ // if not error
                 console.log('MESSAGE: success update');

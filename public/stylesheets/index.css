@@ -16,6 +16,17 @@
     text-decoration: none;
 }
 
+table, th, td{
+    white-space: nowrap;
+
+    border: double 1px #0802ff;
+    text-align: center;
+}
+
+th, td{
+    padding: 5px 10px 5px 10px;
+}
+
 .task_date{
     font-family: "Bitstream Vera Sans", sans-serif;
     font-size: 18px;

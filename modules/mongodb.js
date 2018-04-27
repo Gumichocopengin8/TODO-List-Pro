@@ -2,11 +2,12 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TaskSchema = new Schema({
-    title: {type: String, required: true},
-    task: {type: String},
-    done: {type: Boolean, default: false},
-    created: {type: Date, default: Date.now},
-    updated: {type: Date, default: Date.now}
+    title: {type: String, required: true}, // title of task
+    task: {type: String}, // task contents
+    status: {type: String, default: 'In Progress'}, // task status
+    priority: {type: String, default: 'Normal'},
+    created: {type: Date, default: Date.now}, // created date
+    updated: {type: Date, default: Date.now} // updated date
 });
 
 module.exports = mongoose.model('Task', TaskSchema);
