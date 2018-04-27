@@ -5,7 +5,7 @@ const TaskSchema = new Schema({
     title: {type: String, required: true}, // title of task
     task: {type: String}, // task contents
     status: {type: String, default: 'In Progress'}, // task status
-    priority: {type: String, default: 'Normal'},
+    priority_level: {type: String, default: 'Normal'},
     created: {type: Date, default: Date.now}, // created date
     updated: {type: Date, default: Date.now} // updated date
 });

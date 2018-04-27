@@ -22,8 +22,8 @@
                 <tr>
                     <th>No.</th>
                     <th>Task</th>
-                    <th>Status</th>
                     <th>Priority</th>
+                    <th>Status</th>
                     <th>Updated Date</th>
                     <th>Created Date</th>
                     <th>Delete</th>
@@ -36,8 +36,8 @@
                             <input type="hidden" name="_id" value="<%= task._id %>">
                             <td><%= index + 1 %></td>
                             <td><a href="/edit/<%= task._id %>" class="task_title"><%= task.title %></a></td>
+                            <td><%= task.priority_level %></td>
                             <td><%= task.status %></td>
-                            <td><%= task.priority %></td>
                             <div class="task_date">
                                 <td><%= task.updated.toLocaleDateString() %>: <%= task.updated.toLocaleTimeString() %></td>
                                 <td><%= task.created.toLocaleDateString() %>: <%= task.created.toLocaleTimeString() %></td>

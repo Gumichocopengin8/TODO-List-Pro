@@ -31,7 +31,7 @@ router.post('/create', function (req, res) {
     task.title = req.body.title;
     task.task = req.body.task;
     task.status = req.body.status;
-    task.priority = req.body.priority;
+    task.priority_level = req.body.priority_level;
     task.save(function (err) {
         if(!err){ // if not error
             console.log('MESSAGE: success create');
@@ -69,7 +69,7 @@ router.put('/update', function (req, res, next) {
         task.title  = req.body.title;
         task.task = req.body.task;
         task.status = req.body.status;
-        task.priority = req.body.priority;
+        task.priority_level = req.body.priority_level;
         task.updated = Date.now();
         task.save(function (err) {
             if(!err){ // if not error

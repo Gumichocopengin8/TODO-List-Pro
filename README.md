@@ -19,9 +19,8 @@ Click the title named *'TODO List Pro'* to go home page.
 1.0.0
 
 ## For next version
-* Use extends in .ejs files because current files are messy. Use table?
-* Change UI
-* Make a filter
+* Make filters
+* In /public/javascripts/effect.js, I wanna use '<%= task.priority %>', but i can't. Need to fix it. written in edit.ejs instead.
 
 
 ## Reference
@@ -45,17 +44,17 @@ Click the title named *'TODO List Pro'* to go home page.
 
 * [Express2](http://webdesign-dackel.com/2015/09/29/vagrant-node-express4-mongodb/)
 
-[Express3](https://gist.github.com/mitsuruog/fc48397a8e80f051a145)
+* [Express3](https://gist.github.com/mitsuruog/fc48397a8e80f051a145)
 
-[forEach](https://www.sejuku.net/blog/20257)
+* [forEach](https://www.sejuku.net/blog/20257)
 
-[config](https://qiita.com/noraworld/items/84e58a330f423621a490)
+* [config](https://qiita.com/noraworld/items/84e58a330f423621a490)
 
-[EJS](https://qiita.com/fnobi/items/6225673eb52c698844eb)
+* [EJS](https://qiita.com/fnobi/items/6225673eb52c698844eb)
 
-[.env](https://qiita.com/uma0317/items/e142661c004f68d858a5)
+* [.env](https://qiita.com/uma0317/items/e142661c004f68d858a5)
 
-[CSS](https://saruwakakun.com/html-css/basic/css)
+* [CSS](https://saruwakakun.com/html-css/basic/css)
 
-[CSS Grid Layout](https://qiita.com/kura07/items/e633b35e33e43240d363)
+* [CSS Grid Layout](https://qiita.com/kura07/items/e633b35e33e43240d363)
 

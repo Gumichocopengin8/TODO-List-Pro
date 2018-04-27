@@ -1,5 +1,21 @@
 <% include header.ejs %>
 
+<script>
+    function select_checked(target, arg) {
+        select = document.getElementById(target).options;
+        for(let i = 0; i < select.length; i++ ){
+            if(select[i].value === arg){
+                select[i].selected = true;
+                break;
+            }
+        }
+    }
+    window.onload = function() {
+        select_checked('edit_status', '<%= task.status %>');
+        select_checked('edit_priority', '<%= task.priority_level %>');
+    };
+</script>
+
 <div id="container">
     <div id="content-top">
         <h1>
@@ -21,7 +37,7 @@
                 <input type="hidden" name="_id" value="<%= task._id %>">
                 <div>
                     Priority:
-                    <select id="edit_priority" name="priority" onload="select_checked(<%= task.priority %>)" required>
+                    <select id="edit_priority" name="priority_level" required>
                         <option value="Crucial">Crucial</option>
                         <option value="High">High</option>
                         <option value="Normal">Normal</option>
@@ -31,7 +47,7 @@
                 </div>
                 <div>
                     Status:
-                    <select name="status" required>
+                    <select id="edit_status" name="status" required>
                         <option value="Complete">Complete</option>
                         <option value="In Progress">In Progress</option>
                         <option value="Not Started">Not Started</option>
