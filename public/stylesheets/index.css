@@ -27,6 +27,13 @@ th, td{
     padding: 5px 10px 5px 10px;
 }
 
+td{
+    max-width: 30vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 .task_date{
     font-family: "Bitstream Vera Sans", sans-serif;
     font-size: 18px;

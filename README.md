@@ -15,6 +15,12 @@ Click the title named *'TODO List Pro'* to go home page.
 
 **This TODO List is NOT private**
 
+## Command
+
+`npm start` then go to http://localhost:8000
+
+`npm update` - update npm modules
+
 ## Version
 1.0.0
 

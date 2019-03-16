@@ -39,7 +39,7 @@ router.post('/create', function (req, res) {
         } else { // if there's error
             console.log('MESSAGE: create error', err);
             req.flash('MESSAGE: ', err.errors);
-            req.redirect('/add');
+            res.redirect('/add');
         }
     })
 });

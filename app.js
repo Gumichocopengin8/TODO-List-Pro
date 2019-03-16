@@ -30,7 +30,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
-app.use(express.urlencoded({ extended: false }));
 
 
 // connect to mongodb
@@ -43,7 +42,7 @@ mongoose.connect(process.env.DB_URL, function (err){
 });
 
 
-// add these contents should be upper than pp.use('/', indexRouter), app.use('/users', usersRouter).
+// add these contents should be upper than app.use('/', indexRouter), app.use('/users', usersRouter).
 app.use(methodOverride(function(req){
     if( req.body && typeof req.body === 'object' && '_method' in req.body ){
         const method = req.body._method;
