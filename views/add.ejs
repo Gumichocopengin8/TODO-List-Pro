@@ -1,57 +1,49 @@
 <% include header.ejs %>
 
 <div id="container">
-    <div id="content-top">
-        <h1>
-            <a href="/">TODO List Pro</a>
-        </h1>
-    </div>
-    <div id="content-middle">
-
-    </div>
-    <div id="content-right">
-
-    </div>
-    <div id="content-center">
-        <h2><%= title %></h2>
-        <div class="add_edit_form">
-            <form action="/create" method="post">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <div>
-                    Priority:
-                    <select name="priority_level" required>
-                        <option value="Crucial">Crucial</option>
-                        <option value="High">High</option>
-                        <option value="Normal" selected>Normal</option>
-                        <option value="Low">Low</option>
-                        <option value="Optional">Optional</option>
-                    </select>
-                </div>
-                <div>
-                    Status:
-                    <select name="status" required>
-                        <option value="In Progress" selected>In Progress</option>
-                        <option value="Not Started">Not Started</option>
-                    </select>
-                </div>
-                <div>
-                    <input class="input_title" type="text" name="title" value="" placeholder="Title" required>
-                </div>
-                <div>
-                    <textarea class="text" name="task" placeholder="What do you need TODO?"></textarea>
-                </div>
-                <div class="create_button">
-                    <button type="submit">Create</button>
-                </div>
-            </form>
+  <div id="content-top">
+    <h1>
+      <a href="/">TODO List Pro</a>
+    </h1>
+  </div>
+  <div id="content-middle"></div>
+  <div id="content-right"></div>
+  <div id="content-center">
+    <h2><%= title %></h2>
+    <div class="add_edit_form">
+      <form action="/create" method="post">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <div>
+          Priority:
+          <select name="priority_level" required>
+            <option value="Crucial">Crucial</option>
+            <option value="High">High</option>
+            <option value="Normal" selected>Normal</option>
+            <option value="Low">Low</option>
+            <option value="Optional">Optional</option>
+          </select>
         </div>
+        <div>
+          Status:
+          <select name="status" required>
+            <option value="In Progress" selected>In Progress</option>
+            <option value="Not Started">Not Started</option>
+          </select>
+        </div>
+        <div>
+          <input class="input_title" type="text" name="title" value="" placeholder="Title" required />
+        </div>
+        <div>
+          <textarea class="text" name="task" placeholder="What do you need TODO?"></textarea>
+        </div>
+        <div class="create_button">
+          <button type="submit">Create</button>
+        </div>
+      </form>
     </div>
-    <div id="content-left">
-
-    </div>
-    <div id="content-bottom">
-
-    </div>
+  </div>
+  <div id="content-left"></div>
+  <div id="content-bottom"></div>
 </div>
 
 <% include footer.ejs %>

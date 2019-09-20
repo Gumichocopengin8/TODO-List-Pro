@@ -1,82 +1,81 @@
-
-:root{
-    --body-background: #5f5f5f;
-    --header-background: #8f1726;
-    --base-background: #8bc1c5;
-    --side-background: #ffffff;
-    --title-Color: #fefdff;
+:root {
+  --body-background: #5f5f5f;
+  --header-background: #8f1726;
+  --base-background: #8bc1c5;
+  --side-background: #ffffff;
+  --title-Color: #fefdff;
 }
 
-html{
-    min-height: 100%;
+html {
+  min-height: 100%;
 }
 
-body{
-    margin: 0;
-    background: var(--body-background);
-    position: relative;
-    padding-bottom: 120px;
+body {
+  margin: 0;
+  background: var(--body-background);
+  position: relative;
+  padding-bottom: 120px;
 }
 
-#container{
-    display: grid;
-    grid-template-rows: 80px 50px 1fr 50px;
-    grid-template-columns: 1fr 2fr 1fr;
+#container {
+  display: grid;
+  grid-template-rows: 80px 50px 1fr 50px;
+  grid-template-columns: 1fr 2fr 1fr;
 }
 
-#content-top{
-    grid-row: 1/2;
-    grid-column: 1/4;
+#content-top {
+  grid-row: 1/2;
+  grid-column: 1/4;
 
-    background: var(--header-background);
-    text-align: center;
-    font-family: "Bitstream Vera Sans", serif;
-    font-size: 35px;
+  background: var(--header-background);
+  text-align: center;
+  font-family: 'Bitstream Vera Sans', serif;
+  font-size: 35px;
 }
 
-#content-top h1{
-    margin: 0;
+#content-top h1 {
+  margin: 0;
 }
 
-#content-top a{
-    text-decoration: none;
-    color: var(--title-Color);
+#content-top a {
+  text-decoration: none;
+  color: var(--title-Color);
 }
 
-#content-middle{
-    grid-row: 2/3;
-    grid-column: 1/4;
+#content-middle {
+  grid-row: 2/3;
+  grid-column: 1/4;
 
-    background: var(--side-background);
+  background: var(--side-background);
 }
 
-#content-right{
-    grid-row: 3/4;
-    grid-column: 1/2;
+#content-right {
+  grid-row: 3/4;
+  grid-column: 1/2;
 
-    background: var(--side-background);
-    padding: 0 30px 0 30px;
+  background: var(--side-background);
+  padding: 0 30px 0 30px;
 }
 
-#content-center{
-    grid-row: 3/4;
-    grid-column: 2/3;
+#content-center {
+  grid-row: 3/4;
+  grid-column: 2/3;
 
-    background: var(--base-background);
-    padding: 50px 80px 50px 80px;
+  background: var(--base-background);
+  padding: 50px 80px 50px 80px;
 }
 
-#content-left{
-    grid-row: 3/4;
-    grid-column: 3/4;
+#content-left {
+  grid-row: 3/4;
+  grid-column: 3/4;
 
-    background: var(--side-background);
-    padding: 0 30px 0 30px;
+  background: var(--side-background);
+  padding: 0 30px 0 30px;
 }
 
-#content-bottom{
-    grid-row: 4/5;
-    grid-column: 1/4;
+#content-bottom {
+  grid-row: 4/5;
+  grid-column: 1/4;
 
-    background: var(--side-background);
+  background: var(--side-background);
 }

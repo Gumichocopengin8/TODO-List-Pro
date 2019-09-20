@@ -1,65 +1,57 @@
 <% include header.ejs %>
 
 <div id="container">
-    <div id="content-top">
-        <h1>
-            <a href="/">TODO List Pro</a>
-        </h1>
-    </div>
-    <div id="content-middle">
-
-    </div>
-    <div id="content-right">
-
-    </div>
-    <div id="content-center">
-        <h2><%= title %></h2>
-        <div>
-            <div class="add_task">
-                <a href="/add">add task</a>
+  <div id="content-top">
+    <h1>
+      <a href="/">TODO List Pro</a>
+    </h1>
+  </div>
+  <div id="content-middle"></div>
+  <div id="content-right"></div>
+  <div id="content-center">
+    <h2><%= title %></h2>
+    <div>
+      <div class="add_task">
+        <a href="/add">add task</a>
+      </div>
+      <table>
+        <tr>
+          <th>No.</th>
+          <th>Task</th>
+          <th>Priority</th>
+          <th>Status</th>
+          <th>Updated Date</th>
+          <th>Created Date</th>
+          <th>Delete</th>
+        </tr>
+        <% tasks.slice().reverse().forEach(function(task, index){ %>
+        <tr>
+          <form action="/delete" method="post">
+            <input type="hidden" name="_method" value="delete" />
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+            <input type="hidden" name="_id" value="<%= task._id %>" />
+            <td><%= index + 1 %></td>
+            <td><a href="/edit/<%= task._id %>" class="task_title"><%= task.title %></a></td>
+            <td><%= task.priority_level %></td>
+            <td><%= task.status %></td>
+            <div class="task_date">
+              <td><%= task.updated.toLocaleDateString() %>: <%= task.updated.toLocaleTimeString() %></td>
+              <td><%= task.created.toLocaleDateString() %>: <%= task.created.toLocaleTimeString() %></td>
             </div>
-            <table>
-                <tr>
-                    <th>No.</th>
-                    <th>Task</th>
-                    <th>Priority</th>
-                    <th>Status</th>
-                    <th>Updated Date</th>
-                    <th>Created Date</th>
-                    <th>Delete</th>
-                </tr>
-                <% tasks.slice().reverse().forEach(function(task, index){ %>
-                    <tr>
-                        <form action="/delete" method="post">
-                            <input type="hidden" name="_method" value="delete">
-                            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                            <input type="hidden" name="_id" value="<%= task._id %>">
-                            <td><%= index + 1 %></td>
-                            <td><a href="/edit/<%= task._id %>" class="task_title"><%= task.title %></a></td>
-                            <td><%= task.priority_level %></td>
-                            <td><%= task.status %></td>
-                            <div class="task_date">
-                                <td><%= task.updated.toLocaleDateString() %>: <%= task.updated.toLocaleTimeString() %></td>
-                                <td><%= task.created.toLocaleDateString() %>: <%= task.created.toLocaleTimeString() %></td>
-                            </div>
-                            <td>
-                                <div class="delete_button">
-                                    <button type="submit" onclick="return confirm('Are you sure to delete this task?');">
-                                        delete
-                                    </button>
-                                </div>
-                            </td>
-                        </form>
-                    </tr>
-                <% }) %>
-            </table>
-        </div>
+            <td>
+              <div class="delete_button">
+                <button type="submit" onclick="return confirm('Are you sure to delete this task?');">
+                  delete
+                </button>
+              </div>
+            </td>
+          </form>
+        </tr>
+        <% }) %>
+      </table>
     </div>
-    <div id="content-left">
-
-    </div>
-    <div id="content-bottom">
-
-    </div>
+  </div>
+  <div id="content-left"></div>
+  <div id="content-bottom"></div>
 </div>
 <% include footer.ejs %>
