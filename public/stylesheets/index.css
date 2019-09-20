@@ -1,45 +1,47 @@
+.add_task {
+  display: inline-block;
+  font-family: 'Bitstream Vera Sans', sans-serif;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 100px;
+  text-decoration: none;
 
-.add_task{
-    display: inline-block;
-    font-family: "Bitstream Vera Sans", sans-serif;
-    font-size: 20px;
-    text-align: right;
-    margin-right: 100px;
-    text-decoration: none;
-
-    border: double 4px #67c5ff;
+  border: double 4px #67c5ff;
 }
 
-.task_title{
-    font-family: "Bitstream Vera Sans", sans-serif;
-    font-size: 27px;
-    text-decoration: none;
+.task_title {
+  font-family: 'Bitstream Vera Sans', sans-serif;
+  font-size: 27px;
+  text-decoration: none;
 }
 
-table, th, td{
-    white-space: nowrap;
+table,
+th,
+td {
+  white-space: nowrap;
 
-    border: double 1px #0802ff;
-    text-align: center;
+  border: double 1px #0802ff;
+  text-align: center;
 }
 
-th, td{
-    padding: 5px 10px 5px 10px;
+th,
+td {
+  padding: 5px 10px 5px 10px;
 }
 
-td{
-    max-width: 30vw;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+td {
+  max-width: 30vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.task_date{
-    font-family: "Bitstream Vera Sans", sans-serif;
-    font-size: 18px;
+.task_date {
+  font-family: 'Bitstream Vera Sans', sans-serif;
+  font-size: 18px;
 }
 
-.delete_button{
-    display: inline-block;
-    text-decoration: none;
+.delete_button {
+  display: inline-block;
+  text-decoration: none;
 }

@@ -1,76 +1,68 @@
 <% include header.ejs %>
 
 <script>
-    function select_checked(target, arg) {
-        select = document.getElementById(target).options;
-        for(let i = 0; i < select.length; i++ ){
-            if(select[i].value === arg){
-                select[i].selected = true;
-                break;
-            }
-        }
+  function select_checked(target, arg) {
+    select = document.getElementById(target).options
+    for (let i = 0; i < select.length; i++) {
+      if (select[i].value === arg) {
+        select[i].selected = true
+        break
+      }
     }
-    window.onload = function() {
-        select_checked('edit_status', '<%= task.status %>');
-        select_checked('edit_priority', '<%= task.priority_level %>');
-    };
+  }
+  window.onload = function() {
+    select_checked('edit_status', '<%= task.status %>')
+    select_checked('edit_priority', '<%= task.priority_level %>')
+  }
 </script>
 
 <div id="container">
-    <div id="content-top">
-        <h1>
-            <a href="/">TODO List Pro</a>
-        </h1>
-    </div>
-    <div id="content-middle">
-
-    </div>
-    <div id="content-right">
-
-    </div>
-    <div id="content-center">
-        <h2><%= title %></h2>
-        <div class="add_edit_form">
-            <form action="/update" method="post">
-                <input type="hidden" name="_method" value="put">
-                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-                <input type="hidden" name="_id" value="<%= task._id %>">
-                <div>
-                    Priority:
-                    <select id="edit_priority" name="priority_level" required>
-                        <option value="Crucial">Crucial</option>
-                        <option value="High">High</option>
-                        <option value="Normal">Normal</option>
-                        <option value="Low">Low</option>
-                        <option value="Optional">Optional</option>
-                    </select>
-                </div>
-                <div>
-                    Status:
-                    <select id="edit_status" name="status" required>
-                        <option value="Complete">Complete</option>
-                        <option value="In Progress">In Progress</option>
-                        <option value="Not Started">Not Started</option>
-                    </select>
-                </div>
-                <div>
-                    <input class="input_title" type="text" name="title" value="<%= task.title %>" placeholder="Title" required>
-                </div>
-                <div>
-                    <textarea class="text" name="task" placeholder="What do you need TODO?"><%= task.task %></textarea>
-                </div>
-                <div class="update_button">
-                    <button type="submit">update</button>
-                </div>
-            </form>
+  <div id="content-top">
+    <h1>
+      <a href="/">TODO List Pro</a>
+    </h1>
+  </div>
+  <div id="content-middle"></div>
+  <div id="content-right"></div>
+  <div id="content-center">
+    <h2><%= title %></h2>
+    <div class="add_edit_form">
+      <form action="/update" method="post">
+        <input type="hidden" name="_method" value="put" />
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+        <input type="hidden" name="_id" value="<%= task._id %>" />
+        <div>
+          Priority:
+          <select id="edit_priority" name="priority_level" required>
+            <option value="Crucial">Crucial</option>
+            <option value="High">High</option>
+            <option value="Normal">Normal</option>
+            <option value="Low">Low</option>
+            <option value="Optional">Optional</option>
+          </select>
         </div>
+        <div>
+          Status:
+          <select id="edit_status" name="status" required>
+            <option value="Complete">Complete</option>
+            <option value="In Progress">In Progress</option>
+            <option value="Not Started">Not Started</option>
+          </select>
+        </div>
+        <div>
+          <input class="input_title" type="text" name="title" value="<%= task.title %>" placeholder="Title" required />
+        </div>
+        <div>
+          <textarea class="text" name="task" placeholder="What do you need TODO?"><%= task.task %></textarea>
+        </div>
+        <div class="update_button">
+          <button type="submit">update</button>
+        </div>
+      </form>
     </div>
-    <div id="content-left">
-
-    </div>
-    <div id="content-bottom">
-
-    </div>
+  </div>
+  <div id="content-left"></div>
+  <div id="content-bottom"></div>
 </div>
 
 <% include footer.ejs %>
