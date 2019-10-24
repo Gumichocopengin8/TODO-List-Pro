@@ -15,12 +15,12 @@
     "dotenv": "^5.0.1",
     "ejs": "~2.5.7",
     "express": "^4.17.1",
-    "express-session": "^1.16.2",
+    "express-session": "^1.17.0",
     "http-errors": "~1.6.2",
     "method-override": "^2.3.10",
-    "mongoose": "^5.7.1",
+    "mongoose": "^5.7.6",
     "morgan": "^1.9.1",
-    "npm": "^6.11.3"
+    "npm": "^6.12.0"
   },
   "engines": {
     "node": "9.10.1",
